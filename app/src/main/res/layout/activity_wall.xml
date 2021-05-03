@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/wall_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.WallpaperActivity">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/up_button"
+        android:onClick="backPress"
+        android:padding="8dp"
+        android:src="@drawable/ic_back"
+        android:textColor="@color/textColor"
+        android:translationZ="3dp" />
+
+    <ProgressBar
+        android:id="@+id/loadMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/wallHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:contentDescription="IMAGE"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/expandButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/up_button"
+            android:onClick="toggleBottom"
+            android:padding="8dp"
+            android:src="@drawable/ic_up"
+            android:textColor="@color/textColor" />
+
+        <ImageButton
+            android:id="@+id/favoriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/up_button"
+            android:onClick="favoriteImage"
+            android:padding="8dp"
+            android:src="@drawable/ic_heart"
+            android:textColor="@color/textColor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sheet"
+        android:backgroundTint="@color/sheetCol"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/collapseSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:onClick="toggleBottom"
+            android:src="@drawable/ic_down" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/postTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="TITLE"
+                    android:textColor="@color/secondary"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/maven_pro_medium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="85dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/edit" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="setWallpaper"
+                        android:text="@string/set_string"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary"
+                        app:drawableTopCompat="@drawable/ic_wallpaper" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="downloadImage"
+                        android:text="@string/save_string"
+                        android:textSize="16sp"
+                        android:textColor="@color/secondary"
+                        app:drawableTopCompat="@drawable/ic_download" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@color/edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="launchPost"
+                        android:text="@string/post_string"
+                        android:textColor="@color/secondary"
+                        android:textSize="16sp"
+                        app:drawableTopCompat="@drawable/ic_post" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="85dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/edit" />
+
+                <!-- Reddit API Data... -->
+                <TextView
+                    android:id="@+id/upvotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="28dp"
+                    android:fontFamily="@font/maven_pro"
+                    android:text="@string/upvotes_string"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="28dp"
+                    android:text="@string/comments_string"
+                    android:fontFamily="@font/maven_pro"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/uploadDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="28dp"
+                    android:text="@string/date_string"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/maven_pro" />
+
+                <TextView
+                    android:id="@+id/imageSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="28dp"
+                    android:text="@string/size_string"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/maven_pro" />
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="28dp"
+                    android:onClick="launchUser"
+                    android:text="@string/author_string"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/maven_pro" />
+
+                <TextView
+                    android:id="@+id/subreddit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginBottom="25dp"
+                    android:onClick="copySubName"
+                    android:text="@string/subreddit_string"
+                    android:textColor="@color/secondary"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/maven_pro" />
+                <!-- End API Data...-->
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

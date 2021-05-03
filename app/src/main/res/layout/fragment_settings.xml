@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <!--
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="@string/app_name"
+                android:fontFamily="@font/maven_pro"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:id="@+id/version"
+                android:fontFamily="@font/maven_pro"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:textStyle="bold"
+                android:textColor="@color/textColor"
+                android:text="@string/title_version_number"
+                android:textSize="16sp" />
+
+            <!--
+            <TextView
+                android:id="@+id/donate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textColor="@color/textColor"
+                android:text="@string/title_support_dev"
+                android:textSize="16sp" />
+                -->
+
+            <TextView
+                android:id="@+id/ossLicense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textColor="@color/textColor"
+                android:text="@string/title_licenses"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/defaultLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textColor="@color/textColor"
+                android:text="@string/set_default_subreddit"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/defaultEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:background="@drawable/edit_states"
+                android:hint="@string/default_sub"
+                android:importantForAutofill="no"
+                android:textColor="@color/textColor"
+                android:inputType="text"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/prefResTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textColor="@color/textColor"
+                android:text="@string/set_preferred_resolution"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/resSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/widthEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_states"
+                    android:hint="Width"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textColor="@color/textColor"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="X"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/heightEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_states"
+                    android:hint="Height"
+                    android:importantForAutofill="no"
+                    android:textColor="@color/textColor"
+                    android:inputType="number"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/previewRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:switchPadding="10dp"
+                android:text="@string/load_lower_resolution_previews"
+                android:textSize="16sp"
+                android:theme="@style/ThemeOverlay.AppCompat.DayNight" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/randomSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:switchPadding="10dp"
+                android:text="@string/enable_random_favorite_wallpapers"
+                android:textSize="16sp"
+                android:theme="@style/ThemeOverlay.AppCompat.DayNight" />
+
+            <TextView
+                android:id="@+id/changeIntervalTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textColor="@color/textColor"
+                android:text="@string/set_random_switch_interval_hours"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/randomSeekSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/intervalSeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_weight="2"
+                    android:max="23"
+                    android:theme="@style/ThemeOverlay.AppCompat.DayNight" />
+
+                <TextView
+                    android:id="@+id/intervalCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="1 hr"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/refreshLocationSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/randomLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="12dp"
+                    android:layout_weight="2"
+                    android:text="Random refresh wallpaper location: "
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/randomLocationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:foreground="@drawable/ripple"
+                    android:text="Home"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/downloadOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:switchPadding="10dp"
+                android:text="@string/download_original_image"
+                android:textSize="16sp"
+                android:theme="@style/ThemeOverlay.AppCompat.DayNight" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/darkSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:switchPadding="10dp"
+                android:text="@string/toggle_dark_mode"
+                android:textSize="16sp"
+                android:theme="@style/ThemeOverlay.AppCompat.DayNight" />
+            <!--
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/gridSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            android:switchPadding="10dp"
+                            android:text="@string/toggle_layout"
+                            android:textSize="16sp"
+                            android:theme="@style/ThemeOverlay.AppCompat.DayNight" />
+            -->
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_button"
+                    android:foreground="@drawable/ripple"
+                    android:text="@string/save_settings"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

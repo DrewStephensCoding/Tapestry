@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/delete_all"
+        android:icon="@drawable/ic_delete"
+        android:orderInCategory="50"
+        android:title="@string/clear" />
+
+    <item
+        android:id="@+id/down_all"
+        android:icon="@drawable/ic_down"
+        android:orderInCategory="60"
+        android:title="@string/download_all" />
+
+    <item
+        android:id="@+id/random"
+        android:icon="@drawable/ic_shuffle"
+        android:orderInCategory="70"
+        android:title="@string/choose_random" />
+
+</menu>
