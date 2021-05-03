@@ -3,7 +3,7 @@
 
 *Made with love ❤️ by [Drew](https://github.com/DrewStephensCoding)*
 
-***Try latest TickerIO app apk from below 👇***
+***Try latest app apk from below 👇***
 **Coming Soon...**
 
 ## Built With 🛠
