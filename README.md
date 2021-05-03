@@ -1,5 +1,5 @@
-# Tapestry
-**A wallpaper app utilizing the Reddit API**
+# Tapestry for Reddit - An unofficial wallpaper client
+**A wallpaper app utilizing the Reddit API.  Pulls images from a specified subreddit to set as device wallpaper**
 
 *Made with love ❤️ by [Drew](https://github.com/DrewStephensCoding)*
 
@@ -11,10 +11,25 @@
 - [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - For asynchronous and more..
 - [Material Components for Android](https://github.com/material-components/material-components-android) - Modular and customizable Material Design UI components for Android.
 
-## Architecture
-  
+## Features
+- Toggle between light and dark themes
+- Loads images from a specified subreddit into a linear user interface (Future plans include toggling view from linear to grid)
+- Preview image and have the option to set it as a wallpaper
+- Options between setting the home or lock screen wallpaper
+- Specify the image resolution in settings
+- Specify a default subreddit to load from on start up
+- Sort Reddit images by new, hot, or top
+- Search for subreddits
+- Ability to download the image
+- Save favorite images to be viewed later
+- Set scale down for images being loaded in gridview to minimize bandwidth consumption
+- View history of downloaded or set wallpapers
+
+## Architecture 
 This app uses [***MVVM (Model View View-Model)***](https://developer.android.com/jetpack/docs/guide#recommended-app-arch) architecture.
 
+### Screenshots
+<img src="screenshots/Tapestry-home-dark.jpg" height="331" width="223"><img src="screenshots/Tapestry-home-light.jpg" height="331" width="223"><img src="screenshots/Tapestry-favorites.jpg" height="331" width="223"><img src="screenshots/Tapestry-favorites_data.jpg" height="331" width="223"><img src="screenshots/Tapestry-set_wallpaper.jpg" height="331" width="223"><img src="screenshots/Tapestry-search.jpg" height="331" width="223"><img src="screenshots/Tapestry-history.jpg" height="331" width="223"><img src="screenhots/Tapestry-settings.jpg" height="331" width="223">
 
 ## License
 ```
