@@ -10,6 +10,8 @@
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
 - [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - For asynchronous and more..
 - [Material Components for Android](https://github.com/material-components/material-components-android) - Modular and customizable Material Design UI components for Android.
+- [Glide v4](https://bumptech.github.io/glide/) - A fast and efficient image loading library for Android focused on smooth scrolling
+- [Google Play Services - Open Source Notices](https://developers.google.com/android/guides/opensource) - Google Play services includes a set of tools designed to give developers an easier way to express the open source software notices of libraries used in their apps.
 
 ## Features
 - Toggle between light and dark themes
@@ -29,7 +31,7 @@
 This app uses [***MVVM (Model View View-Model)***](https://developer.android.com/jetpack/docs/guide#recommended-app-arch) architecture.
 
 ### Screenshots
-<img src="screenshots/Tapestry-home-dark.jpg" height="495" width="223"><img src="screenshots/Tapestry-home-light.jpg" height="495" width="223"><img src="screenshots/Tapestry-favorites.jpg" height="495" width="223"><img src="screenshots/Tapesty-favorites_data.jpg" height="495" width="223"><img src="screenshots/Tapestry-set_wallpaper.jpg" height="495" width="223"><img src="screenshots/Tapestry-search.jpg" height="495" width="223"><img src="screenshots/Tapestry-history.jpg" height="495" width="223"><img src="screenshots/Tapestry-settings.jpg" height="495" width="223">
+<img src="screenshots/Tapestry-home-dark.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-home-light.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-favorites.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapesty-favorites_data.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-set_wallpaper.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-search.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-history.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-settings.jpg" height="495" width="223">
 
 ## License
 ```
