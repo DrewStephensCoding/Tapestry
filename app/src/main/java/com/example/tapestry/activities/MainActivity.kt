@@ -82,6 +82,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val SharedPrefFile = "com.example.tapestry"
+        const val SharedPrefFile = "com.github.drewstephenscoding.tapestry"
     }
 }

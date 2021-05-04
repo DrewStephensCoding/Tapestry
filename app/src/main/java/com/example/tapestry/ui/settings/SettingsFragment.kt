@@ -162,27 +162,6 @@ class SettingsFragment : Fragment() {
                 (activity as AppCompatActivity).delegate.applyDayNight()
             }
         }
-/*
-
-        // Change layout from Linear to Grid
-        // HomeFragment Recyclerview
-        grid = preferences.getBoolean(GRID, false)
-        binding.gridSwitch.isChecked = grid
-        binding.gridSwitch.setOnCheckedChangeListener { _, c ->
-
-            grid = c
-            stateChanged = true
-            preferences.edit().putBoolean(GRID, grid).apply()
-            if(c){
-                binding.root.getL = GridLayoutManager(getContext(), GridLayoutManager.VERTICAL)
-                Toast.makeText(getContext(), "Grid Layout", Toast.LENGTH_SHORT).show()
-            } else {
-                binding.root.imageScroll.layoutManager = LinearLayoutManager(getContext())
-                Toast.makeText(getContext(), "Linear Layout", Toast.LENGTH_SHORT).show()
-            }
-
-        }
-*/
 
         // Save Settings
         binding.saveButton.setOnClickListener {

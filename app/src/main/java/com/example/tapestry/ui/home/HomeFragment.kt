@@ -2,19 +2,21 @@ package com.example.tapestry.ui.home
 
 import android.os.Bundle
 import android.util.Log
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.tapestry.R
 import com.example.tapestry.databinding.FragmentHomeBinding
 import com.example.tapestry.objects.RecyclerListener
 import com.example.tapestry.ui.settings.SettingsFragment
 import com.example.tapestry.utils.AppUtils
 import com.example.tapestry.utils.RedditAPI
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.InternalCoroutinesApi
 
 class HomeFragment : Fragment() {
@@ -24,6 +26,8 @@ class HomeFragment : Fragment() {
     lateinit var imageViewModel: ImageViewModel
     private lateinit var imageAdapter: ImageAdapter
     private var isLoading = false
+    private var isGridLayout = false
+
 
     @InternalCoroutinesApi
     override fun onCreateView(
@@ -46,6 +50,7 @@ class HomeFragment : Fragment() {
         val prefs = AppUtils.getPreferences(requireContext())
         val defaultSub =
             prefs.getString(SettingsFragment.DEFAULT, SettingsFragment.DEFAULT_SUB).toString()
+
         val dimensions = AppUtils.getDimensions(requireContext())
         val lowRes = prefs.getBoolean(SettingsFragment.PREVIEW_RES, false)
         imageAdapter = ImageAdapter(dimensions, lowRes)
@@ -83,9 +88,11 @@ class HomeFragment : Fragment() {
                     }
 
                     override fun onLongItemClick(view: View?, position: Int) {
-                        val selectedImage = imageAdapter.getWallImage(position)
-                        AppUtils.startWallActivity(requireContext(), selectedImage)
-
+                        isGridLayout = !isGridLayout
+                        binding.imageScroll.layoutManager = if (isGridLayout) GridLayoutManager(
+                            context,
+                            2
+                        ) else LinearLayoutManager(context)
                     }
                 })
         )
