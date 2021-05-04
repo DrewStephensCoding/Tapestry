@@ -4,8 +4,8 @@
 *Made with love ❤️ by [Drew](https://github.com/DrewStephensCoding)*
 
 ***Try latest app apk from below 👇***
-[![Tapestry for Reddit](https://img.shields.io/badge/Tapestry-APK-black.svg?style=for-the-badge&logo=android)]
-(https://github.com/DrewStephensCoding/Tapestry/releases/download/1.0/tapestry.apk)
+
+[![Tapestry](https://img.shields.io/badge/Tapestry-APK-black.svg?style=for-the-badge&logo=android)](https://github.com/DrewStephensCoding/Tapestry/releases/download/1.0/tapestry.apk)
 
 ***Upload to Google Playstore is currently in work!***
 
