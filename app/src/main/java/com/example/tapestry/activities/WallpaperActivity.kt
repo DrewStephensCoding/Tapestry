@@ -146,7 +146,7 @@ class WallpaperActivity : AppCompatActivity(), GestureDetector.OnGestureListener
         }
         val bitmap = (binding.wallHolder.drawable as BitmapDrawable).bitmap
         val builder = MaterialAlertDialogBuilder(this, R.style.MyThemeOverlayAlertDialog)
-        builder.setTitle("Set Where?")
+        builder.setTitle("Choose location of wallpaper")
             .setItems(R.array.location_options) { _, i ->
                 temp.show()
                 val wallLoc = if (i == 0) {

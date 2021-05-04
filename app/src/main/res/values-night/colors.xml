@@ -4,7 +4,7 @@
     <color name="colorPrimary">#202231</color>
     <color name="colorPrimaryDark">#202231</color>
     <color name="colorAccent">#03B1A9</color>
-    <color name="cardViewBackground">#3258595D</color>
+    <color name="cardViewBackground">#54161C35</color>
     <color name="white">@android:color/white</color>
     <color name="textColor">#FFFFFF</color>
     <color name="secondary">@android:color/secondary_text_dark</color>

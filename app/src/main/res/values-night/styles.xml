@@ -35,15 +35,6 @@
         <item name="windowActionBar">true</item>
         <item name="windowNoTitle">false</item>
     </style>
-    <!--
-        <style name="open">
-            <item name="android:icon">@drawable/ic_open_dark</item>
-        </style>
-
-        <style name="filled">
-            <item name="android:icon">@drawable/ic_filled_dark</item>
-        </style>
-    -->
 
     <style name="MyThemeOverlayAlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Dialog.Rounded
