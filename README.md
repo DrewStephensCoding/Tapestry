@@ -31,7 +31,7 @@
 This app uses [***MVVM (Model View View-Model)***](https://developer.android.com/jetpack/docs/guide#recommended-app-arch) architecture.
 
 ### Screenshots
-<img src="screenshots/Tapestry-home-dark.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-home-light.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-favorites.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapesty-favorites_data.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-set_wallpaper.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-search.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-history.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-settings.jpg" height="495" width="223">
+<img src="screenshots/Tapestry-home-dark.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-home-light.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-favorites.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-favorites_data.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-set_wallpaper.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-search.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-history.jpg" height="495" width="223">&nbsp;  <img src="screenshots/Tapestry-settings.jpg" height="495" width="223">
 
 ## License
 ```
