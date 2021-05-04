@@ -15,14 +15,14 @@
 
 ## Features
 - Toggle between light and dark themes
-- Loads images from a specified subreddit into a linear user interface (Future plans include toggling view from linear to grid)
+- Long press on the home screen to change the layout
 - Preview image and have the option to set it as a wallpaper
 - Options between setting the home or lock screen wallpaper
 - Specify the image resolution in settings
 - Specify a default subreddit to load from on start up
 - Sort Reddit images by new, hot, or top
 - Search for subreddits
-- Ability to download the image
+- Download the image to your device
 - Save favorite images to be viewed later
 - Set scale down for images being loaded in gridview to minimize bandwidth consumption
 - View history of downloaded or set wallpapers
