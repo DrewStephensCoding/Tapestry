@@ -4,7 +4,10 @@
 *Made with love ❤️ by [Drew](https://github.com/DrewStephensCoding)*
 
 ***Try latest app apk from below 👇***
-**Coming Soon...**
+[![Tapestry for Reddit](https://img.shields.io/badge/Tapestry-APK-black.svg?style=for-the-badge&logo=android)]
+(https://github.com/DrewStephensCoding/Tapestry/releases/download/1.0/tapestry.apk)
+
+***Upload to Google Playstore is currently in work!***
 
 ## Built With 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
